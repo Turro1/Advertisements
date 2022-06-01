@@ -10,7 +10,7 @@ using FluentValidation;
 namespace Advertisements.Application.Common.Behaviors
 {
     public class ValidationBehavior
-    {<TRequest, TResponse>
+    <TRequest, TResponse>
       : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
@@ -33,7 +33,6 @@ namespace Advertisements.Application.Common.Behaviors
             }
             return next();
         }
-    }
     }
 }
 
